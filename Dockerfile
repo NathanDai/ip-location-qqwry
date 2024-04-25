@@ -18,6 +18,9 @@ WORKDIR /data/ip-location-qqwry/
 
 RUN mkdir bin/
 
+RUN rm qqwry.dat
+RUN wget https://github.com/metowolf/qqwry.dat/releases/latest/download/qqwry.dat
+
 COPY qqwry.dat /data/ip-location-qqwry/bin/
 COPY --from=0 /data/ip-location-qqwry/bin/ip-location-qqwry bin/
 
