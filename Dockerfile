@@ -18,7 +18,7 @@ WORKDIR /data/ip-location-qqwry/
 
 RUN mkdir bin/
 
-COPY qqwry.dat/20231122/qqwry.dat /data/ip-location-qqwry/bin/
+COPY qqwry.dat /data/ip-location-qqwry/bin/
 COPY --from=0 /data/ip-location-qqwry/bin/ip-location-qqwry bin/
 
 HEALTHCHECK --interval=5s --timeout=5s --retries=3 \
